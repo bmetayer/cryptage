@@ -2,11 +2,15 @@
 #include <stdlib.h>
 
 char	*displayMenu();
+char	*EncryptionNormal(char *UserInput);
+char	my_putstr(char *MessageCrypted);
 
 char    *takeStringUser() // Lecture de l'entrée utilisateur par la fonction fgets
 {
   char	*UserInput;
 
+  UserInput = malloc(200);
+  UserInput[199] = '\0';
   printf("Enter which is to be encrypted \n");
   fgets(UserInput, 200, stdin);
   return (UserInput);
@@ -20,18 +24,21 @@ int	main()
 {
   char	*UserChoice;
   char	*UserInput;
-
+  char	*MessageCrypted;
+  
   UserChoice = displayMenu();
   UserInput = takeStringUser();
-  /*  switch(atoi(UserChoice))
+  switch(atoi(UserChoice))
     {
     case 1:
-      EncryptionNormal(UserInput);
+      MessageCrypted = EncryptionNormal(UserInput);
+      my_putstr(MessageCrypted);
+      free(UserInput);
       break;
     case 2:
       break;
     default:
       break;
-    }*/
+    }
   return (0);
 }
