@@ -5,7 +5,7 @@ char    *takeStringUser() // Lecture de l'entrée utilisateur par la fonction fg
 {
   char	*UserInput;
 
-  printf("Enter which is to be encrypted \n");
+  printf("Enter what is to be encrypted \n");
   fgets(UserInput, 200, stdin);
   return (UserInput);
 }
