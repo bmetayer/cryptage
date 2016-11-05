@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char	*displayMenu();
+
 char    *takeStringUser() // Lecture de l'entrée utilisateur par la fonction fgets
 {
   char	*UserInput;
@@ -21,7 +23,7 @@ int	main()
 
   UserChoice = displayMenu();
   UserInput = takeStringUser();
-  switch(atoi(UserChoice))
+  /*  switch(atoi(UserChoice))
     {
     case 1:
       EncryptionNormal(UserInput);
@@ -30,6 +32,6 @@ int	main()
       break;
     default:
       break;
-    }
+    }*/
   return (0);
 }
