@@ -9,13 +9,9 @@ char    *takeStringUser() // Lecture de l'entrée utilisateur par la fonction fg
 {
   char	*UserInput;
 
-<<<<<<< HEAD
   UserInput = malloc(200);
   UserInput[199] = '\0';
-  printf("Enter which is to be encrypted \n");
-=======
   printf("Enter what is to be encrypted \n");
->>>>>>> 4c320706762c74bb456b21dea0f9e1376d0654de
   fgets(UserInput, 200, stdin);
   return (UserInput);
 }
